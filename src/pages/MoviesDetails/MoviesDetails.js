@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, NavLink, useNavigate, Outlet } from 'react-router-dom';
 import apiClient from '../../services/apiClient';
 
-import css from './MoviesDetails.module.css'
+import css from './MoviesDetails.module.css';
 
 function MovieDetails() {
   const [movie, setMovie] = useState({});
@@ -29,6 +29,7 @@ function MovieDetails() {
         <li>
           <img
             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+            loading="lazy"
             alt=""
             width="300"
           />
@@ -39,8 +40,12 @@ function MovieDetails() {
           <p>{movie.release_date}</p>
         </li>
       </ul>
-      <NavLink className={css.cast} to="cast">Cast</NavLink>
-      <NavLink className={css.reviews} to="reviews">Reviews</NavLink>
+      <NavLink className={css.cast} to="cast">
+        Cast
+      </NavLink>
+      <NavLink className={css.reviews} to="reviews">
+        Reviews
+      </NavLink>
       <Outlet />
     </section>
   );
