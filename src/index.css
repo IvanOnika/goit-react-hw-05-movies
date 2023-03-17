@@ -42,3 +42,7 @@ button{
 input{
   height: 27px;
 }
+
+p{
+  padding-left: 40px;
+}

@@ -30,13 +30,20 @@ const Reviews = () => {
         <p>{content}</p>
       </li>
     ));
+    return (
+      <ul>
+      {reviewMarkup}
+      </ul>
+    );
+  
   }
+  else{
+    return(
+    <p>There is no reviews !</p>
+  )}
 
-  return (
-    <ul>
-    {reviewMarkup}
-    </ul>
-  );
+
+  
 };
 
 export default Reviews;
