@@ -18,12 +18,12 @@ function MovieDetails() {
     fetchMovie();
   }, [movieId]);
 
-  const goBack = () => navigate(-1);
+  const goBack = () => navigate('/');
 
   return (
     <section className="container">
       <button onClick={goBack} className="button">
-        back
+        go Back
       </button>
       <ul>
         <li>
